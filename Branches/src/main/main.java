@@ -78,7 +78,7 @@ public class main {
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/");
-			// Thread.sleep(500);
+			
 			if (click) {
 				driver.findElement(By.tagName("button")).click();
 			}
@@ -95,25 +95,6 @@ public class main {
 
 		}
 
-	}
-
-	private static void MargeBranches(String Source, String Target) throws ClientProtocolException, IOException {
-		HttpClient httpclient = HttpClients.createDefault();
-		HttpPost httppost = new HttpPost(
-				"https://eyes.applitools.com/api/baselines/copybranch?accesskey=97LpK5zFPRImwmKu4AUAJzfZ1w9tDlK7m2K2CQEFuUo0110");
-
-		// Request parameters and other properties.
-		ArrayList<NameValuePair> params = new ArrayList<NameValuePair>(3);
-		params.add(new BasicNameValuePair("AppName", AppName));
-		params.add(new BasicNameValuePair("SourceBranch", Source));
-		params.add(new BasicNameValuePair("TargetBranch", Target));
-		httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
-
-		// Execute and get the response.
-		HttpResponse response = httpclient.execute(httppost);
-		// HttpEntity entity = response.getEntity();
-
-		System.out.println(response.getStatusLine());
 	}
 
 }
