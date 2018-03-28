@@ -41,12 +41,12 @@ public class main {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 		eyes.setBatch(batch);
-		CheckBranch("mybranch", true);
+		CheckBranch();
 
 	}
 	
 	
-	private static void CheckBranch(String BranchName, boolean click) {
+	private static void mainbrabch() {
 		WebDriver driver = new ChromeDriver();
 		
 		try {
@@ -55,10 +55,8 @@ public class main {
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/");
+			driver.findElement(By.tagName("button")).click();
 			
-			if (click) {
-				driver.findElement(By.tagName("button")).click();
-			}
 			eyes.checkWindow();
 
 			eyes.close(false);
