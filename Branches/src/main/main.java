@@ -41,34 +41,41 @@ public class main {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 		eyes.setBatch(batch);
-		MainBranch();
+		CheckBranch("mybranch", true);
 
 	}
-
-	private static void MainBranch() {
+	
+	
+	private static void CheckBranch(String BranchName, boolean click) {
 		WebDriver driver = new ChromeDriver();
+		
 		try {
+			//eyes.setParentBranchName("default");
+			eyes.setBranchName(BranchName);
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
+
 			driver.get("https://applitools.com/helloworld/");
-			eyes.checkWindow();
-			eyes.setStitchMode(StitchMode.CSS);
 			
+			if (click) {
+				driver.findElement(By.tagName("button")).click();
+			}
+			eyes.checkWindow();
 
 			eyes.close(false);
-			System.out.println("Main Branch");
 
+			System.out.println(BranchName);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {
 			driver.quit();
 			eyes.abortIfNotClosed();
+
 		}
 
 	}
 
-
-
+	
 }
 
-//curl -c output.txt -d "AppName=TestBranches4&SourceBranch=B1&TargetBranch=default" -X POST https://eyes.applitools.com/api/baselines/copybranch?accesskey=97LpK5zFPRImwmKu4AUAJzfZ1w9tDlK7m2K2CQEFuUo0110 
+
 
