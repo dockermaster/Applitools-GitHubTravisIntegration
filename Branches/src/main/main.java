@@ -39,7 +39,7 @@ public class main {
 
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
-		eyes.setApiKey("ioRRQOF5YBYU6NIwbe3tuDFCX8H109mmenarZo8arSlbA110");
+		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 		 
 		BatchInfo batch = new BatchInfo("BranchsTest2");
 		eyes.setBatch(batch);
