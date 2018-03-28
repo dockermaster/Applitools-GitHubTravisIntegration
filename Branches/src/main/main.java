@@ -40,7 +40,11 @@ public class main {
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-		eyes.setBatch(batch);
+		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
+		String batchName = null;
+		BatchInfo batchInfo = new BatchInfo(batchName); 
+		batchInfo.setId(batchId);
+		eyes.setBatch(batchInfo);
 		MainBranch();
 
 	}
