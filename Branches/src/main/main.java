@@ -34,17 +34,14 @@ import java.time.LocalDateTime;
 
 public class main {
 	private static Eyes eyes = new Eyes();
-	private static String AppName = "TestBranches7";
-	private static String TestName = "Branches" + DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+	private static String AppName = "GiyhubIntegration";
+	private static String TestName = "Test_Github_Integration");  
 
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-		 
-		BatchInfo batch = new BatchInfo("BranchsTest2");
 		eyes.setBatch(batch);
 		MainBranch();
-		CheckBranch("mybranch", true);
 
 	}
 
@@ -69,33 +66,7 @@ public class main {
 
 	}
 
-	private static void CheckBranch(String BranchName, boolean click) {
-		WebDriver driver = new ChromeDriver();
-		
-		try {
-			//eyes.setParentBranchName("default");
-			eyes.setBranchName(BranchName);
-			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
-			driver.get("https://applitools.com/helloworld/");
-			
-			if (click) {
-				driver.findElement(By.tagName("button")).click();
-			}
-			eyes.checkWindow();
-
-			eyes.close(false);
-
-			System.out.println(BranchName);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			driver.quit();
-			eyes.abortIfNotClosed();
-
-		}
-
-	}
 
 }
 
