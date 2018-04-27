@@ -41,8 +41,8 @@ public class main {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 		
-		final String sauceUser = "matan";
-		final String sauceKey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
+		final String sauceUser = System.getenv("SAUCE_USER");
+		final String sauceKey = System.getenv("SAUCE_KEY");
 		String url = "http://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
 
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
