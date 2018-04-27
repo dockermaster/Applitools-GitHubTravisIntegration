@@ -40,43 +40,38 @@ public class main {
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-
+		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		String batchName = null;
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
+		MainBranch();
 
 	}
-	
-	
-	private static void mainbrabch() {
-		WebDriver driver = new ChromeDriver();
-		
-		try {
-			//eyes.setParentBranchName("default");
-			eyes.setBranchName(BranchName);
-			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
+	private static void MainBranch() {
+		WebDriver driver = new ChromeDriver();
+		try {
+			eyes.open(driver, AppName, TestName, new RectangleSize(1000, 600));
 			driver.get("https://applitools.com/helloworld/");
-			driver.findElement(By.tagName("button")).click();
-			
 			eyes.checkWindow();
+			eyes.setStitchMode(StitchMode.CSS);
+			
 
 			eyes.close(false);
+			System.out.println("Main Branch");
 
-			System.out.println(BranchName);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {
 			driver.quit();
 			eyes.abortIfNotClosed();
-
 		}
 
 	}
 
-	
+
+
 }
 
-
-
+//curl -c output.txt -d "AppName=TestBranches4&SourceBranch=B1&TargetBranch=default" -X POST https://eyes.applitools.com/api/baselines/copybranch?accesskey=97LpK5zFPRImwmKu4AUAJzfZ1w9tDlK7m2K2CQEFuUo0110 
