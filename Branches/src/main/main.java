@@ -52,7 +52,7 @@ public class main {
 	private static void MainBranch() {
 		WebDriver driver = new ChromeDriver();
 		try {
-			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
+			eyes.open(driver, AppName, TestName, new RectangleSize(1000, 600));
 			driver.get("https://applitools.com/helloworld/");
 			eyes.checkWindow();
 			eyes.setStitchMode(StitchMode.CSS);
@@ -75,4 +75,3 @@ public class main {
 }
 
 //curl -c output.txt -d "AppName=TestBranches4&SourceBranch=B1&TargetBranch=default" -X POST https://eyes.applitools.com/api/baselines/copybranch?accesskey=97LpK5zFPRImwmKu4AUAJzfZ1w9tDlK7m2K2CQEFuUo0110 
-
