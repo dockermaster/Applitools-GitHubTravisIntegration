@@ -40,16 +40,27 @@ public class main {
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
+		
+		final String sauceUser = "matan";
+		final String sauceKey = "ec79e940-078b-41d4-91a6-d7d6008cf1ea";
+		String url = "http://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
+
+		DesiredCapabilities caps = DesiredCapabilities.chrome();
+		caps.setCapability("platform", "Windows 10");
+		caps.setCapability("version", "65.0");
+
+		RemoteWebDriver driver = new RemoteWebDriver(new URL(url), caps);
+		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		String batchName = null;
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
-		MainBranch();
+		MainBranch(driver);
 
 	}
 
-	private static void MainBranch() {
+	private static void MainBranch(WebDriver driver) {
 		WebDriver driver = new ChromeDriver();
 		try {
 			eyes.open(driver, AppName, TestName, new RectangleSize(1000, 600));
