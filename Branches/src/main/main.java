@@ -27,7 +27,7 @@ public class main {
 	
 	private static Eyes eyes = new Eyes();
 	private static String AppName = "GiyhubIntegration";
-	private static String TestName = "Test_Github_Integration");  
+	private static String TestName = "Test_Github_Integration";  
 
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
