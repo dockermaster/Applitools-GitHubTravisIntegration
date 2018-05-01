@@ -52,7 +52,7 @@ public class main {
 		RemoteWebDriver driver = new RemoteWebDriver(new URL(url), caps);
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
-		String batchName = "Branch_name";
+		String batchName = "BatchName";
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
