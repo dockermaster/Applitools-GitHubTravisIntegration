@@ -40,7 +40,8 @@ public class main {
 		caps.setCapability("platform", "Windows 10");
 		caps.setCapability("version", "65.0");
 
-		RemoteWebDriver driver = new RemoteWebDriver(new URL(url), caps);
+		//RemoteWebDriver driver = new RemoteWebDriver(new URL(url), caps);
+		WebDriver driver = new ChromeDriver();
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		String batchName = "BatchName";
