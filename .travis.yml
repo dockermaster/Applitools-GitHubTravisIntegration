@@ -7,4 +7,4 @@ script:
 - echo $APPLITOOLS_BATCH_ID
 - cd Branches
 - java -version
-- mvn test
+- mvn test -B
