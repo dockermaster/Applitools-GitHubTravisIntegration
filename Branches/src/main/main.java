@@ -62,7 +62,7 @@ public class main {
 	}
 
 	private static void MainBranch(WebDriver driver) {
-		WebDriver driver = new ChromeDriver();
+		
 		try {
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 			driver.get("https://applitools.com/helloworld/");
