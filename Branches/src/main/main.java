@@ -27,7 +27,7 @@ public class main {
 	
 	private static Eyes eyes = new Eyes();
 	private static String AppName = "GiyhubIntegration";
-	private static String TestName = "Test_Github_Integration");  
+	private static String TestName = "Test_Github_Integration";  
 
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
@@ -55,7 +55,7 @@ public class main {
 	private static void MainBranch(WebDriver driver) {
 		
 		try {
-			eyes.open(driver, AppName, TestName, new RectangleSize(900, 600));
+			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 			driver.get("https://applitools.com/helloworld/");
 			eyes.checkWindow();
 			eyes.setStitchMode(StitchMode.CSS);
