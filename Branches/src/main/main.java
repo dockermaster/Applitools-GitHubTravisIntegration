@@ -33,14 +33,15 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;   
 
 public class main {
+	
 	private static Eyes eyes = new Eyes();
 	private static String AppName = "GiyhubIntegration";
 	private static String TestName = "Test_Github_Integration");  
 
 	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("--------------test-----------------");
 		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
-		
 		final String sauceUser = System.getenv("SAUCE_USER");
 		final String sauceKey = System.getenv("SAUCE_KEY");
 		String url = "http://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
@@ -63,7 +64,7 @@ public class main {
 	private static void MainBranch(WebDriver driver) {
 		WebDriver driver = new ChromeDriver();
 		try {
-			eyes.open(driver, AppName, TestName, new RectangleSize(900, 600));
+			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 			driver.get("https://applitools.com/helloworld/");
 			eyes.checkWindow();
 			eyes.setStitchMode(StitchMode.CSS);
