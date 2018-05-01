@@ -17,6 +17,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import com.applitools.eyes.BatchInfo;
 
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
@@ -54,7 +55,7 @@ public class main {
 	private static void MainBranch(WebDriver driver) {
 		
 		try {
-			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
+			eyes.open(driver, AppName, TestName, new RectangleSize(900, 600));
 			driver.get("https://applitools.com/helloworld/");
 			eyes.checkWindow();
 			eyes.setStitchMode(StitchMode.CSS);
