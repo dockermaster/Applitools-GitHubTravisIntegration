@@ -7,4 +7,4 @@ script:
 - echo $APPLITOOLS_BATCH_ID
 - cd Branches
 - java -version
-- mvn exec:java -Dexec.mainClass=src/main -e
+- mvn test
