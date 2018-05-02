@@ -51,7 +51,7 @@ class Test {
 		try {
 			System.out.println("in test method");
 
-			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
+			eyes.open(driver, AppName, TestName, new RectangleSize(900, 600));
 			driver.get("https://applitools.com/helloworld/");
 			
 			eyes.checkWindow();
