@@ -7,4 +7,4 @@ script:
 - echo $APPLITOOLS_BATCH_ID
 - cd Junit
 - java -version
-- mvn test -B
+- mvn test
