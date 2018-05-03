@@ -36,7 +36,7 @@ class Test {
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
-		String batchName = "BatchName";
+		String batchName = "BatchName1";
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
