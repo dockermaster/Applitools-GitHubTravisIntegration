@@ -7,5 +7,6 @@ script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
 - echo $APPLITOOLS_BATCH_ID
+- cd TestNG
 - java -version
 - mvn test -B
