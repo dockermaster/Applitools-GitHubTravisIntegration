@@ -19,6 +19,12 @@
 	</build>
 	<dependencies>
 		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.13.6</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.applitools</groupId>
 			<artifactId>eyes-selenium-java3</artifactId>
 			<version>RELEASE</version>
