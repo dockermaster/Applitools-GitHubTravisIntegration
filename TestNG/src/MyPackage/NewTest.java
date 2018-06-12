@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 
 public class NewTest {
 	public Eyes eyes = new Eyes();
