@@ -50,7 +50,8 @@ public class NewTest {
 			driver.get("https://applitools.com/helloworld");
 
 			
-			eyes.checkWindow();
+			//eyes.checkWindow();
+			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
 			eyes.close();
 //			System.out.println("Main Branch");
