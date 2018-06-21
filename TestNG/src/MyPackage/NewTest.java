@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
 
 public class NewTest {
 	public Eyes eyes = new Eyes();
@@ -47,10 +48,12 @@ public class NewTest {
 		try {
 			System.out.println("in test method");
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
-			driver.get("https://applitools.com/helloworld");
+
+			driver.get("https://applitools.com/helloworld/");
 
 			
-			eyes.checkWindow();
+			//eyes.checkWindow();
+			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
 			eyes.close();
 //			System.out.println("Main Branch");
