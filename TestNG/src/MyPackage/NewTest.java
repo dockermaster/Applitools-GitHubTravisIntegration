@@ -35,12 +35,12 @@ public class NewTest {
 
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
-		//String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
-		//System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
+		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
+		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 		String batchName = "TestNG";
 		BatchInfo batchInfo = new BatchInfo(batchName); 
-		//batchInfo.setId(batchId);
-		//eyes.setBatch(batchInfo);
+		batchInfo.setId(batchId);
+		eyes.setBatch(batchInfo);
 	}
 
 	@Test
@@ -55,7 +55,7 @@ public class NewTest {
 			//eyes.checkWindow();
 			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
-			eyes.close();
+			eyes.close(false);
 //			System.out.println("Main Branch");
 
 		} catch (Exception e) {
