@@ -55,7 +55,7 @@ public class NewTest {
 			//eyes.checkWindow();
 			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
-			eyes.close(false);
+			eyes.close();
 //			System.out.println("Main Branch");
 
 		} catch (Exception e) {
