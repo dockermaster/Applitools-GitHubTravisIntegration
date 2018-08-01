@@ -47,6 +47,7 @@ public class NewTest {
 	public void Test() {
 		try {
 			System.out.println("in test method");
+			eyes.setParentBranchName("parent_branch_name");
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/?diff2");
