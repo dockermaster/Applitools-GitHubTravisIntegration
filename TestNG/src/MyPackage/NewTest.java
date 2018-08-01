@@ -47,7 +47,7 @@ public class NewTest {
 	public void Test() {
 		try {
 			System.out.println("in test method");
-			eyes.setParentBranchName("FeatureBranch");
+			eyes.setParentBranchName("SophieDePaula/Applitools-GitHubIntegration/FeatureBranch");
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/?diff2");
