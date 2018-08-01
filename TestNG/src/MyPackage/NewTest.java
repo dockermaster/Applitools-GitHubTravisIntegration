@@ -50,7 +50,7 @@ public class NewTest {
 
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
-			driver.get("https://applitools.com/helloworld/?diff2");
+			driver.get("https://applitools.com/helloworld/?diff1");
 
 			
 			//eyes.checkWindow();
