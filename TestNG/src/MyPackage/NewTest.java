@@ -35,27 +35,30 @@ public class NewTest {
 
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
-// 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
-// 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
-// 		String batchName = "TestNG";
-// 		BatchInfo batchInfo = new BatchInfo(batchName); 
-// 		batchInfo.setId(batchId);
-// 		eyes.setBatch(batchInfo);
+
+		//String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
+		//System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
+		//String batchName = "TestNG";
+		//BatchInfo batchInfo = new BatchInfo(batchName); 
+		//batchInfo.setId(batchId);
+		//eyes.setBatch(batchInfo);
+
 	}
 
 	@Test
 	public void Test() {
 		try {
 			System.out.println("in test method");
+			
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
-			driver.get("https://applitools.com/helloworld/?diff2");
+			driver.get("https://applitools.com/helloworld/?diff1");
 
 			
 			//eyes.checkWindow();
 			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
-			eyes.close();
+			eyes.close(false);
 //			System.out.println("Main Branch");
 
 		} catch (Exception e) {
