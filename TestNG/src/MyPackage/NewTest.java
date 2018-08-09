@@ -35,12 +35,14 @@ public class NewTest {
 
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
+
 		//String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		//System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 		//String batchName = "TestNG";
 		//BatchInfo batchInfo = new BatchInfo(batchName); 
 		//batchInfo.setId(batchId);
 		//eyes.setBatch(batchInfo);
+
 	}
 
 	@Test
@@ -50,7 +52,7 @@ public class NewTest {
 			
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
-			driver.get("https://applitools.com/helloworld/?diff1");
+			driver.get("https://applitools.com/helloworld/?diff2");
 
 			
 			//eyes.checkWindow();
