@@ -16,7 +16,7 @@ import com.applitools.eyes.selenium.fluent.Target;
 public class NewTest {
 	public Eyes eyes = new Eyes();
 	public String AppName = "GithubIntegration";
-	public String TestName = "Test_Github_Integration";  
+	public String TestName = "Test_Github_Integration2";  
 	RemoteWebDriver driver;
 	
 	@BeforeMethod
@@ -43,7 +43,7 @@ public class NewTest {
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
 		
-		eyes.setBranchName("MyBranch");
+		//eyes.setBranchName("MyBranch");
 
 	}
 
