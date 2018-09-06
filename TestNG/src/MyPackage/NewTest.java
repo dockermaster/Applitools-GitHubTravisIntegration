@@ -17,6 +17,7 @@ public class NewTest {
 	public Eyes eyes = new Eyes();
 	public String AppName = "GithubIntegration";
 	public String TestName = "Test_Github_Integration3";  
+	RemoteWebDriver driver;
 
 	
 	@BeforeMethod
