@@ -16,8 +16,9 @@ import com.applitools.eyes.selenium.fluent.Target;
 public class NewTest {
 	public Eyes eyes = new Eyes();
 	public String AppName = "GithubIntegration";
+  ֿ
 	public String TestName = "Test_Github_Integration9";  
-	RemoteWebDriver driver;
+
 
 	
 	@BeforeMethod
@@ -56,7 +57,7 @@ public class NewTest {
 			
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
-			driver.get("https://applitools.com/helloworld/?diff1");
+			driver.get("https://applitools.com/helloworld/?diff2");
 
 			
 			//eyes.checkWindow();
