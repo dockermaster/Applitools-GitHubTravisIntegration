@@ -16,7 +16,7 @@ import com.applitools.eyes.selenium.fluent.Target;
 public class NewTest {
 	public Eyes eyes = new Eyes();
 	public String AppName = "GithubIntegration";
-	public String TestName = "Test_Github_Integration8";  
+	public String TestName = "Test_Github_Integration9";  
 	RemoteWebDriver driver;
 
 	
