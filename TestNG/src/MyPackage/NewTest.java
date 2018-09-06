@@ -17,7 +17,7 @@ public class NewTest {
 	public Eyes eyes = new Eyes();
 	public String AppName = "GithubIntegration";
 	public String TestName = "Test_Github_Integration3";  
-	RemoteWebDriver driver;
+
 	
 	@BeforeMethod
 	public void setUpBeforMethod() throws MalformedURLException {
@@ -51,6 +51,7 @@ public class NewTest {
 	public void Test() {
 		try {
 			System.out.println("in test method");
+			eyes.setBranchName("BranchName");
 			
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
