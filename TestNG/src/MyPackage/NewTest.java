@@ -56,7 +56,7 @@ public class NewTest {
 			System.out.println("in test method");
 
 // 			eyes.setBranchName("BranchName");
-// 			eyes.setSaveNewTests(true);
+			eyes.setSaveNewTests(true);
 
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
