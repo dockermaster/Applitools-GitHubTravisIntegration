@@ -42,10 +42,10 @@ public class NewTest {
 
 		//System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 		String batchName = "TestNG";
-		BatchInfo batchInfo = new BatchInfo(batchName); 
+		BatchInfo batchInfo = new BatchInfo(); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
-		System.out.println("branch name " + eyes.getBranchName());
+		System.out.println("batch name " + eyes.getBatch().getName());
 
 
 	}
