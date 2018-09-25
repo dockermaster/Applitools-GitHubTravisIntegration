@@ -45,7 +45,7 @@ public class NewTest {
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
-		System.out.println("batch name " + batch.getName());
+		System.out.println("batch name " + batchInfo.getName());
 
 
 	}
