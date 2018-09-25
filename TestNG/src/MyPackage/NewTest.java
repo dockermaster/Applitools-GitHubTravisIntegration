@@ -36,12 +36,13 @@ public class NewTest {
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
 
-		//String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
+		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		//System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 		//String batchName = "TestNG";
-		//BatchInfo batchInfo = new BatchInfo(batchName); 
-		//batchInfo.setId(batchId);
-		//eyes.setBatch(batchInfo);
+		BatchInfo batchInfo = new BatchInfo(batchName); 
+		batchInfo.setId(batchId);
+		eyes.setBatch(batchInfo);
+		System.out.println("batch name " + batch.getName());
 
 	}
 
@@ -49,8 +50,8 @@ public class NewTest {
 	public void Test() {
 		try {
 			System.out.println("in test method");
-			eyes.setBranchName("BranchName");
-			
+// 			eyes.setBranchName("BranchName");
+			eyes.setSaveNewTests(true);
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/?diff2");
