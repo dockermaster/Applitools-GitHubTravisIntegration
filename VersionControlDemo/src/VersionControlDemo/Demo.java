@@ -50,7 +50,7 @@ public class Demo {
 		driver = new ChromeDriver();
 		
 		String batchId  = System.getenv("APPLITOOLS_BATCH_ID");
-//		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
+		System.out.println("version control demo");
 		String batchName = "VersionControlDemo";
 		BatchInfo batchInfo = new BatchInfo(batchName); 
 		
