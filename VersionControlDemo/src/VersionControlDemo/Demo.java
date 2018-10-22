@@ -32,7 +32,7 @@ public class Demo {
 	@BeforeMethod
 	public void setUpBeforMethod() throws MalformedURLException {
 		System.out.println("--------------test-----------------");
-//		System.err.println(System.getenv("APPLITOOLS_API_KEY"));
+		System.err.println("Versoin Control Demo");
 //		eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 		eyes.setApiKey("8dYllwT3bXG1KzF6jTrpSLmmouv6naOJsopRyA2NUSc110");
 		final String sauceUser = System.getenv("SAUCE_USER");
