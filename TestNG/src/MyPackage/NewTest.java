@@ -37,7 +37,6 @@ public class NewTest {
 
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
-
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 		String batchName = "TestNG";
