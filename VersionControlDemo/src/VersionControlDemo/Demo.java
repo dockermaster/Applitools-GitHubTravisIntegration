@@ -68,7 +68,7 @@ public class Demo {
 			driver.get("https://github.com/");
 			eyes.open(driver, AppName, TestName, new RectangleSize(1000, 800));
 			
-			//js injection
+			//java script injection
 			 JavascriptExecutor js = (JavascriptExecutor) driver;
 			 js.executeScript("document.querySelector(\"body > div.application-main > div.py-6.py-sm-8.jumbotron-codelines > div > div > div.mx-auto.col-sm-8.col-md-5.hide-sm > div > form > button\").style.backgroundColor = '#125221'");
 
