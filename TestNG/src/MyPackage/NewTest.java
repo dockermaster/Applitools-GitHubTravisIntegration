@@ -58,7 +58,6 @@ public class NewTest {
 
 			driver.get("https://applitools.com/helloworld/?diff2");
 
-			
 			//eyes.checkWindow();
 			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
