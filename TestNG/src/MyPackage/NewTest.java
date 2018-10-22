@@ -19,8 +19,6 @@ public class NewTest {
 	public String TestName = "Test_Github_Integration9";  
 	RemoteWebDriver driver;
 
-
-	
 	@BeforeMethod
 	public void setUpBeforMethod() throws MalformedURLException {
 		System.out.println("--------------test-----------------");
