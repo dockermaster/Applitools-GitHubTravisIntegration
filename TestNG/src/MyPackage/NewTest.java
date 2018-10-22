@@ -28,7 +28,6 @@ public class NewTest {
 		final String sauceKey = System.getenv("SAUCE_KEY");
 		String url = "http://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
 		
-		
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setCapability("platform", "Windows 10");
 		caps.setCapability("version", "65.0");
