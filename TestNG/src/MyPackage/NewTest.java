@@ -19,8 +19,6 @@ public class NewTest {
 	public String TestName = "Test_Github_Integration9";  
 	RemoteWebDriver driver;
 
-
-	
 	@BeforeMethod
 	public void setUpBeforMethod() throws MalformedURLException {
 		System.out.println("--------------test-----------------");
@@ -30,7 +28,6 @@ public class NewTest {
 		final String sauceKey = System.getenv("SAUCE_KEY");
 		String url = "http://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
 		
-		
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setCapability("platform", "Windows 10");
 		caps.setCapability("version", "65.0");
@@ -38,6 +35,7 @@ public class NewTest {
 		driver = new RemoteWebDriver(new URL(url), caps);
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
+
 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
 // 		String batchName = "TestNG";
 		BatchInfo batchInfo = new BatchInfo(""); 
@@ -54,13 +52,14 @@ public class NewTest {
 	public void Test() {
 		try {
 			System.out.println("in test method");
-			//eyes.setBranchName("BranchName");
-			
+
+// 			eyes.setBranchName("BranchName");
+			eyes.setSaveNewTests(true);
+
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
 
 			driver.get("https://applitools.com/helloworld/?diff1");
 
-			
 			//eyes.checkWindow();
 			eyes.check("test", Target.window());
 			System.out.println("in test method 2");
