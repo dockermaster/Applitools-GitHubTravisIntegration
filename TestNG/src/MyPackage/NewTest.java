@@ -39,10 +39,11 @@ public class NewTest {
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
-		String batchName = "TestNG";
-		BatchInfo batchInfo = new BatchInfo(batchName); 
+// 		String batchName = "TestNG";
+		BatchInfo batchInfo = new BatchInfo(""); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
+		System.out.println(eyes.getBatch().getName());
 		
 		//eyes.setBranchName("master");
 
