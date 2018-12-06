@@ -43,6 +43,7 @@ public class NewTest {
 		BatchInfo batchInfo = new BatchInfo(""); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
+		System.out.println("batch name");
 		System.out.println(eyes.getBatch().getName());
 		
 		//eyes.setBranchName("master");
