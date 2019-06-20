@@ -36,13 +36,15 @@ public class NewTest {
 		
 		String batchId   = System.getenv("APPLITOOLS_BATCH_ID");
 
-// 		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
-		String batchName = "TestNG";
-		BatchInfo batchInfo = new BatchInfo(batchName); 
+		System.out.println(System.getenv("APPLITOOLS_BATCH_ID"));
+// 		String batchName = "TestNG";
+		BatchInfo batchInfo = new BatchInfo(""); 
 		batchInfo.setId(batchId);
 		eyes.setBatch(batchInfo);
-		System.out.println("batch name " + eyes.getBatch().getName());
-
+		System.out.println("batch name");
+		System.out.println(eyes.getBatch().getName());
+		
+		//eyes.setBranchName("master");
 
 	}
 
@@ -52,6 +54,7 @@ public class NewTest {
 			System.out.println("in test method");
 
 // 			eyes.setBranchName("BranchName");
+			eyes.setBranchName("SophieDePaula/Applitools-GitHubIntegration/master1");
 			eyes.setSaveNewTests(true);
 
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
