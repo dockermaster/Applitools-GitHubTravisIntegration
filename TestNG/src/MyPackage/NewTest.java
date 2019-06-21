@@ -54,7 +54,7 @@ public class NewTest {
 			System.out.println("in test method");
 
 // 			eyes.setBranchName("BranchName");
-			eyes.setBranchName("SophieDePaula/Applitools-GitHubIntegration/master1");
+			eyes.setBranchName("SophieDePaula/Applitools-GitHubIntegration/master2");
 			eyes.setSaveNewTests(true);
 
 			eyes.open(driver, AppName, TestName, new RectangleSize(800, 600));
