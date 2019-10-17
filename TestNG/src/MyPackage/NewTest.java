@@ -71,7 +71,7 @@ public class NewTest {
 			System.out.println(e.getMessage());
 		} finally {
 			driver.quit();
-			eyes.abortIfNotClosed();
+			eyes.abort()
 		}
 	}
 }
