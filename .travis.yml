@@ -1,7 +1,9 @@
 language: java
 jdk: 
 - oraclejdk9
-
+script:
+  - jdk_switcher use oraclejdk9
+  
 script:
 - cd TestNG
 - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
