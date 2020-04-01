@@ -1,8 +1,6 @@
 language: java
 jdk: 
-- oraclejdk9
-script:
-  - jdk_switcher use oraclejdk9
+- oraclejdk11
   
 script:
 - cd TestNG
